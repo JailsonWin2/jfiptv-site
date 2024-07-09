@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JFIPTV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>JFIPTV</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">SOBRE NÓS</a></li>
+                <li><a href="#contrate">CONTRATE</a></li>
+                <li><a href="#oque">O QUE É O IPTV</a></li>
+                <li><a href="#promocao">PROMOÇÃO INDIQUE E GANHE</a></li>
+                <li><a href="#vendedor">SEJA UM VENDEDOR</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let sections = document.querySelectorAll('section');
+            let options = {
+                threshold: 0.1
+            };
+            
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+    
+
+    <section id="sobre">
+        <h2>SOBRE NÓS</h2>
+        <p>Bem-vindo à JFIPTV, seu serviço de IPTV de confiança. Oferecemos a melhor qualidade de transmissão com uma vasta gama de canais para todos os gostos.</p>
+        <img src="images/sobre.jpg" alt="Sobre Nós">
+    </section>
+
+    <section id="contrate">
+        <h2>CONTRATE</h2>
+        <p>Assine agora por apenas R$ 30,00 por mês e tenha acesso a milhares de canais de qualidade.</p>
+        <a href="https://api.whatsapp.com/send?phone=5547992755863&text=Oi%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20seu%20IPTV" class="whatsapp-button">Contrate pelo WhatsApp</a>
+        <img src="images/contrate.jpg" alt="Contrate">
+    </section>
+
+    <section id="oque">
+        <h2>O QUE É O IPTV</h2>
+        <p>IPTV é um serviço de transmissão de televisão que utiliza o protocolo de internet para entregar conteúdos televisivos diretamente ao seu dispositivo. É uma alternativa moderna e eficiente aos serviços tradicionais de TV a cabo.</p>
+        <img src="images/iptv.jpg" alt="O que é o IPTV">
+    </section>
+
+    <section id="promocao">
+        <h2>PROMOÇÃO INDIQUE E GANHE</h2>
+        <p>Indique um amigo e ganhe um mês grátis de assinatura para cada cliente novo que se inscrever no nosso serviço através da sua indicação. Aproveite essa oportunidade!</p>
+        <img src="images/promocao.jpg" alt="Promoção Indique e Ganhe">
+    </section>
+
+    <section id="vendedor">
+        <h2>SEJA UM VENDEDOR</h2>
+        <p>Quer se tornar um vendedor JFIPTV? Entre em contato conosco e descubra como você pode lucrar com nossas vendas de assinaturas.</p>
+        <a href="https://api.whatsapp.com/send?phone=5547992755863&text=Oi%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20ser%20um%20vendedor%20de%20IPTV" class="whatsapp-button">Seja um Vendedor</a>
+        <img src="images/vendedor.jpg" alt="Seja um Vendedor">
+    </section>
+
+    <footer>
+        <p>&copy; 2024 JFIPTV. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
